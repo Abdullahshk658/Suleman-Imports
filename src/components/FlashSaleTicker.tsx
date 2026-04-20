@@ -31,7 +31,7 @@ export default function FlashSaleTicker() {
               Flash Sale Ending In: {String(timeLeft.hours).padStart(2, '0')}:{String(timeLeft.minutes).padStart(2, '0')}:{String(timeLeft.seconds).padStart(2, '0')}
             </span>
             <span className="text-xs font-bold uppercase tracking-[0.2em] opacity-50">
-              Up to 70% Off Imported Premium
+              Fresh footwear drops with runner and slip-on markdowns
             </span>
           </div>
         ))}

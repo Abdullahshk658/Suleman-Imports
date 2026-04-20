@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { ArrowRight, Globe, MapPin, Package, Zap } from 'lucide-react';
+import { ArrowRight, Globe, Package, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 interface MegaMenuProps {
@@ -13,43 +13,43 @@ export default function MegaMenu({ isOpen, onClose }: MegaMenuProps) {
     {
       title: 'Shop by Category',
       items: [
-        { name: 'Men', href: '/products?category=Men' },
-        { name: 'Women', href: '/products?category=Women' },
-        { name: 'Kids', href: '/products?category=Kids' },
-        { name: 'Home', href: '/products?category=Home' },
-        { name: 'Electronics', href: '/products?category=Electronics' },
-      ]
+        { name: 'Formal', href: '/products?category=Formal' },
+        { name: 'Slip-On', href: '/products?category=Slip-On' },
+        { name: 'Runner', href: '/products?category=Runner' },
+        { name: 'Sneaker', href: '/products?category=Sneaker' },
+        { name: 'Warehouse', href: '/products?category=Warehouse' },
+      ],
     },
     {
       title: 'Shop by Brand',
       items: [
-        { name: 'Ralph Lauren', href: '/products?brand=Ralph%20Lauren' },
-        { name: 'Gucci', href: '/products?brand=Gucci' },
-        { name: 'Polo Republica', href: '/products?brand=Polo%20Republica' },
-        { name: 'Junaid Jamshed', href: '/products?brand=Junaid%20Jamshed' },
-        { name: 'Sony', href: '/products?brand=Sony' },
-      ]
+        { name: 'StreetForm', href: '/products?brand=StreetForm' },
+        { name: 'MotionLab', href: '/products?brand=MotionLab' },
+        { name: 'CourtLine', href: '/products?brand=CourtLine' },
+        { name: 'Suleman Classics', href: '/products?brand=Suleman%20Classics' },
+        { name: 'Warehouse Picks', href: '/products?brand=Warehouse%20Picks' },
+      ],
     },
     {
       title: 'Imported Hub',
       icon: <Globe className="text-black" size={16} />,
       items: [
-        { name: 'Top US Imports', href: '/products?origin=international' },
-        { name: 'UK Fashion Elite', href: '/products?origin=international' },
-        { name: 'UAE Luxury Tech', href: '/products?origin=international' },
-        { name: 'View All Imported', href: '/products?origin=international', bold: true },
-      ]
+        { name: 'Studio Sneaker Drops', href: '/products?origin=international' },
+        { name: 'Runner Capsule', href: '/products?category=Runner&origin=international' },
+        { name: 'Court Styles', href: '/products?brand=CourtLine' },
+        { name: 'View Imported', href: '/products?origin=international', bold: true },
+      ],
     },
     {
-      title: 'Local Heritage',
+      title: 'Local Stock',
       icon: <Package className="text-orange-600" size={16} />,
       items: [
-        { name: 'Factory Overruns', href: '/products?origin=domestic' },
-        { name: 'Lawn & Kurtas', href: '/products?origin=domestic' },
-        { name: 'Artisanal Home', href: '/products?origin=domestic' },
-        { name: 'View All Local', href: '/products?origin=domestic', bold: true },
-      ]
-    }
+        { name: 'Raw Angle Listings', href: '/products?origin=domestic' },
+        { name: 'Warehouse Lots', href: '/products?category=Warehouse' },
+        { name: 'Comfort Slip-Ons', href: '/products?category=Slip-On&origin=domestic' },
+        { name: 'View Local', href: '/products?origin=domestic', bold: true },
+      ],
+    },
   ];
 
   return (
@@ -89,7 +89,6 @@ export default function MegaMenu({ isOpen, onClose }: MegaMenuProps) {
           ))}
         </div>
 
-        {/* Featured Banner in Menu */}
         <div className="mt-12 p-6 bg-gray-50 rounded-3xl flex items-center justify-between">
           <div className="flex items-center space-x-6">
             <div className="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center text-white">
@@ -97,7 +96,7 @@ export default function MegaMenu({ isOpen, onClose }: MegaMenuProps) {
             </div>
             <div>
               <p className="text-sm font-bold text-black">WEEKEND FLASH SALE</p>
-              <p className="text-xs text-gray-500">Up to 70% off on all Factory Domestic Overruns. Valid till Sunday.</p>
+              <p className="text-xs text-gray-500">Featured runners, loafers, and sneaker stacks from the refreshed uploaded catalog.</p>
             </div>
           </div>
           <Link

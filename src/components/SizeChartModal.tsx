@@ -10,10 +10,12 @@ interface SizeChartModalProps {
 
 export default function SizeChartModal({ isOpen, onClose, category }: SizeChartModalProps) {
   const chartData = [
-    { us: 'S', uk: '36', eu: '46', chest: '36-38"' },
-    { us: 'M', uk: '38', eu: '48', chest: '38-40"' },
-    { us: 'L', uk: '40', eu: '50', chest: '40-42"' },
-    { us: 'XL', uk: '42', eu: '52', chest: '42-44"' },
+    { us: '7', uk: '6', eu: '40', length: '25.0 cm' },
+    { us: '8', uk: '7', eu: '41', length: '25.8 cm' },
+    { us: '9', uk: '8', eu: '42', length: '26.7 cm' },
+    { us: '10', uk: '9', eu: '43', length: '27.5 cm' },
+    { us: '11', uk: '10', eu: '44', length: '28.3 cm' },
+    { us: '12', uk: '11', eu: '45', length: '29.2 cm' },
   ];
 
   return (
@@ -53,7 +55,7 @@ export default function SizeChartModal({ isOpen, onClose, category }: SizeChartM
                     <th className="py-4 text-xs font-bold uppercase tracking-widest text-gray-400">US Size</th>
                     <th className="py-4 text-xs font-bold uppercase tracking-widest text-gray-400">UK Size</th>
                     <th className="py-4 text-xs font-bold uppercase tracking-widest text-gray-400">EU Size</th>
-                    <th className="py-4 text-xs font-bold uppercase tracking-widest text-gray-400">Chest</th>
+                    <th className="py-4 text-xs font-bold uppercase tracking-widest text-gray-400">Foot Length</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-50">
@@ -62,7 +64,7 @@ export default function SizeChartModal({ isOpen, onClose, category }: SizeChartM
                       <td className="py-4 text-sm font-bold">{row.us}</td>
                       <td className="py-4 text-sm text-gray-600">{row.uk}</td>
                       <td className="py-4 text-sm text-gray-600">{row.eu}</td>
-                      <td className="py-4 text-sm text-gray-600">{row.chest}</td>
+                      <td className="py-4 text-sm text-gray-600">{row.length}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -71,7 +73,7 @@ export default function SizeChartModal({ isOpen, onClose, category }: SizeChartM
 
             <div className="mt-8 p-4 bg-gray-50 rounded-2xl">
               <p className="text-[10px] text-gray-500 leading-relaxed italic">
-                * Please note that these measurements are intended as a guide only. Actual sizing may vary between brands and models, especially between imported and local heritage pieces.
+                * These shoe measurements are a guide for the refreshed catalog only. Fit can vary slightly between runners, sneakers, slip-ons, and formal pairs.
               </p>
             </div>
           </motion.div>

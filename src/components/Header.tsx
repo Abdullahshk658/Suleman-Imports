@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+﻿import React, { useState, useEffect, useRef } from 'react';
 import { Search, ShoppingBag, User, Menu, X, Globe, MapPin, ArrowRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useCart } from '../CartContext';
@@ -41,8 +41,8 @@ export default function Header() {
 
   const navLinks = [
     { name: 'Shop', href: '#', hasMegaMenu: true },
-    { name: 'Imported Premium', href: '/products?origin=international', highlight: true },
-    { name: 'Local Heritage', href: '/products?origin=domestic', highlight: true },
+    { name: 'Imported Drops', href: '/products?origin=international', highlight: true },
+    { name: 'Local Stock', href: '/products?origin=domestic', highlight: true },
     { name: 'Flash Sale', href: '/products?sale=true' },
   ];
 
@@ -143,7 +143,7 @@ export default function Header() {
                   type="text"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  placeholder="Search for brands, products (e.g. 'Polo', 'Ralph Lauren')..."
+                  placeholder="Search brands or styles (e.g. 'MotionLab', 'loafer', 'runner')..."
                   className="w-full pl-12 pr-4 py-4 bg-gray-50 border-none rounded-2xl focus:ring-2 focus:ring-black transition-all text-sm"
                   autoFocus
                 />
@@ -178,7 +178,7 @@ export default function Header() {
                           <img src={p.image} className="w-10 h-10 rounded-lg object-cover" alt={p.name} referrerPolicy="no-referrer" />
                           <div>
                             <p className="text-sm font-bold text-gray-900 line-clamp-1">{p.name}</p>
-                            <p className="text-xs text-gray-500">{p.brand} • {p.origin === 'international' ? 'Imported' : 'Local'}</p>
+                            <p className="text-xs text-gray-500">{p.brand} / {p.origin === 'international' ? 'Imported' : 'Local'}</p>
                           </div>
                         </div>
                         <ArrowRight size={14} className="text-gray-300 group-hover:text-black group-hover:translate-x-1 transition-all" />
@@ -240,3 +240,4 @@ export default function Header() {
     </header>
   );
 }
+
